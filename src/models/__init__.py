@@ -11,12 +11,12 @@ from .moshi import MoshiAssistant
 from .glm import GLMAssistant
 from .ultravox import UltravoxAssistant
 from .ichigo import IchigoeAssistant
+from .ichigo_v05 import Ichigov05Assistant
 from .megrez import MegrezAssistant
 from .meralion import MERaLiONAssistant
-from .lyra import LyraMiniAssistant, LyraBaseAssistant
+# from .lyra import LyraMiniAssistant, LyraBaseAssistant
 from .freeze_omni import FreezeOmniAssistant
 from .minicpm import MiniCPMAssistant
-
 model_cls_mapping = {
     'qwen2': Qwen2Assistant,
     'diva': DiVAAssistant,
@@ -32,10 +32,11 @@ model_cls_mapping = {
     'glm': GLMAssistant,
     'ultravox': UltravoxAssistant,
     'ichigo': IchigoeAssistant,
+    "ichigov05": Ichigov05Assistant,
     'megrez': MegrezAssistant,
     'meralion': MERaLiONAssistant,
-    'lyra_mini': LyraMiniAssistant,
-    'lyra_base': LyraBaseAssistant,
+    # 'lyra_mini': LyraMiniAssistant,
+    # 'lyra_base': LyraBaseAssistant,
     'freeze_omni': FreezeOmniAssistant,
     'minicpm': MiniCPMAssistant,
 }
