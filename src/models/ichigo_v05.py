@@ -96,8 +96,8 @@ class Ichigov05Assistant(VoiceAssistant):
         self.ichigo_model.ensure_whisper(self.device)
         self.ichigo_model.to(self.device)
 
-        self.tokenizer = AutoTokenizer.from_pretrained('/home/root/BachVD/model_zoo/Ichigo-llama3.1-8B-v0.5', cache_dir='./cache')
-        self.model = AutoModelForCausalLM.from_pretrained('/home/root/BachVD/model_zoo/Ichigo-llama3.1-8B-v0.5', device_map='cuda', torch_dtype=torch.bfloat16, cache_dir='./cache')
+        self.tokenizer = AutoTokenizer.from_pretrained('homebrewltd/Ichigo-llama3.1-8B-v0.5', cache_dir='./cache')
+        self.model = AutoModelForCausalLM.from_pretrained('homebrewltd/Ichigo-llama3.1-8B-v0.5', device_map='cuda', torch_dtype=torch.bfloat16, cache_dir='./cache')
         self.prompt_template = "<|begin_of_text|><|start_header_id|>user<|end_header_id|>\n\n{text}<|eot_id|><|start_header_id|>assistant<|end_header_id|>\n\n"
     def audio_to_sound_tokens(self, wav, sr, device='cuda'):  
         if sr != 16000:
